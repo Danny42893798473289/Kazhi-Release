@@ -1,6 +1,6 @@
-# Kazhi Release (public)
+# Romlet Client (public release)
 
-Pre-built Kazhi injector for **Minecraft 1.21.8 NeoForge (NetEase PC)**.  
+Pre-built **Romlet Client** injector for **Minecraft 1.21.8 NeoForge (NetEase PC)**.  
 This repo contains **binaries only** — no source code.
 
 ## Download
@@ -21,12 +21,13 @@ The injector validates all three before attach. Do not delete or rename `-unobf.
 
 ## Quick start (EXE)
 
-1. Download `KazhiInjector.zip` from Releases and extract the whole folder.
-2. Start Minecraft (NetEase) and wait at the **main menu**.
-3. Run **`KazhiInjector.exe`**.
-4. Switch to the game and press **INSERT** (default menu key).
+1. Download `RomletClient.zip` from Releases and extract the whole folder.
+2. Run **`RomletClient.exe`** and unlock with your passkey.
+3. Start Minecraft (NetEase) and wait at the **main menu**.
+4. Select the game process (or enable **Auto-inject when Minecraft starts**) and click **INJECT**.
+5. Switch to the game and press **INSERT** (default menu key).
 
-Keep `KazhiInjector.exe`, `app/`, and `runtime/` together.
+Keep `RomletClient.exe`, `app/`, and `runtime/` together.
 
 ## Quick start (JARs only)
 
@@ -43,9 +44,11 @@ Then run (JDK 21+):
 java --add-modules jdk.attach -jar kazhi-injector-1.2.0.jar
 ```
 
+Unlock with your passkey in the launcher before injecting.
+
 ## Logs
 
-- Kazhi debug: `%USERPROFILE%\kazhi-debug.log`
+- Romlet / agent debug: `%USERPROFILE%\.kazhi\kazhi-debug.log` (use **Open log** in the launcher)
 - Minecraft: `<gameDir>\logs\latest.log`
 
 ## Disclaimer
