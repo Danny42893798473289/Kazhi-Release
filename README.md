@@ -1,9 +1,7 @@
 # Romlet Client (public release)
 
-Pre-built **Romlet Client** injector for **Minecraft 1.21.x NeoForge (NetEase PC)**.  
+Pre-built **Romlet Client** injector for **Minecraft 1.21.8 NeoForge (NetEase PC)**.  
 This repo contains **binaries only** — no source code.
-
-Supported MC patches: **1.21.8**, **1.21.4** (launcher detects version and loads the matching payload).
 
 ## Download
 
@@ -16,12 +14,8 @@ Keep all payload JARs in the same folder (`app/` when using the launcher bundle)
 | File | Role |
 |------|------|
 | `kazhi-agent-*.jar` | Java attach agent (loads into the game JVM) |
-| `kazhi-client-*-mc1.21.8.jar` | Obfuscated payload for MC 1.21.8 |
-| `kazhi-client-*-mc1.21.8-unobf.jar` | Runtime payload for MC 1.21.8 |
-| `kazhi-client-*-mc1.21.4.jar` | Obfuscated payload for MC 1.21.4 |
-| `kazhi-client-*-mc1.21.4-unobf.jar` | Runtime payload for MC 1.21.4 |
-
-Legacy unprefixed `kazhi-client-*.jar` names (without `-mc`) still work for **1.21.8** only.
+| `kazhi-client-*.jar` | Obfuscated payload |
+| `kazhi-client-*-unobf.jar` | Runtime payload (required at inject time) |
 
 The injector validates agent + payload jars before attach. Do not delete or rename `-unobf.jar` files.
 
@@ -40,7 +34,7 @@ Put all JARs in one folder (`app/`):
 
 - `kazhi-injector-*.jar`
 - `kazhi-agent-*.jar`
-- both MC variant client pairs (`-mc1.21.8` and `-mc1.21.4`, obf + unobf each)
+- `kazhi-client-*.jar` and `kazhi-client-*-unobf.jar`
 
 Then run (JDK 21+):
 
@@ -56,4 +50,4 @@ See `~/.kazhi/kazhi-debug.log` (or `%USERPROFILE%\.kazhi\kazhi-debug.log` on Win
 
 ## Unsupported versions
 
-If your NetEase launcher ships an MC patch not listed above, injection is blocked with a clear message — do not force-load the wrong payload jar.
+If your NetEase launcher ships an MC patch other than **1.21.8**, injection is blocked with a clear message.
