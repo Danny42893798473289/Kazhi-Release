@@ -11,7 +11,7 @@ Use the latest [GitHub Release](https://github.com/Danny42893798473289/Kazhi-Rel
 
 ## Required files
 
-Keep all payload JARs in the same folder (`app/` when using the EXE):
+Keep all payload JARs in the same folder (`app/` when using the launcher bundle):
 
 | File | Role |
 |------|------|
@@ -25,15 +25,16 @@ Legacy unprefixed `kazhi-client-*.jar` names (without `-mc`) still work for **1.
 
 The injector validates agent + payload jars before attach. Do not delete or rename `-unobf.jar` files.
 
-## Quick start (EXE)
+## Quick start (launcher bundle)
 
 1. Download `RomletClient.zip` from Releases and extract the whole folder.
-2. Run **`RomletClient.exe`** and unlock with your passkey.
-3. Start Minecraft (NetEase) and wait at the **main menu**.
-4. Select the game process (or enable **Auto-inject when Minecraft starts**) and click **INJECT**.
-5. Switch to the game and press **INSERT** (default menu key).
+2. Install **JDK 21+** if you do not already have it.
+3. Run **`RomletClient.bat`** (Windows) or **`RomletClient.sh`** (Linux/macOS) and unlock with your passkey.
+4. Start Minecraft (NetEase) and wait at the **main menu**.
+5. Select the game process (or enable **Auto-inject when Minecraft starts**) and click **INJECT**.
+6. Switch to the game and press **INSERT** (default menu key).
 
-Keep `RomletClient.exe`, `app/`, and `runtime/` together.
+Keep the launcher scripts and `app/` together.
 
 ## Quick start (JARs only)
 
@@ -45,15 +46,15 @@ Put all JARs in one folder (`app/`):
 
 Then run (JDK 21+):
 
-```bat
-java --add-modules jdk.attach -jar kazhi-injector-1.2.0.jar
+```bash
+java --add-modules jdk.attach -jar kazhi-injector-1.2.0.jar gui
 ```
 
 Unlock with your passkey in the launcher before injecting.
 
 ## Logs
 
-See `%USERPROFILE%\.kazhi\kazhi-debug.log` or use **Open log** in the launcher.
+See `~/.kazhi/kazhi-debug.log` (or `%USERPROFILE%\.kazhi\kazhi-debug.log` on Windows), or use **Open log** in the launcher.
 
 ## Unsupported versions
 
