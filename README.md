@@ -29,12 +29,10 @@ The injector validates agent + payload jars before attach. Do not delete or rena
 
 1. Download `RomletClient.zip` from Releases and extract the whole folder.
 2. Install **JDK 21+** if you do not already have it.
-3. Run **`RomletClient.bat`** (Windows) or **`RomletClient.sh`** (Linux/macOS) and unlock with your passkey.
-4. Start Minecraft (NetEase) and wait at the **main menu**.
-5. Select the game process (or enable **Auto-inject when Minecraft starts**) and click **INJECT**.
-6. Switch to the game and press **INSERT** (default menu key).
+3. **Double-click `kazhi-injector-*.jar` in `app/`** (opens the launcher GUI), or run **`RomletClient.bat`** / **`RomletClient.sh`**.
+4. Unlock with your passkey, start Minecraft (NetEase), and click **INJECT**.
 
-Keep the launcher scripts and `app/` together.
+Keep all jars in `app/` together. The injector JAR is the main launcher — no `.exe` required.
 
 ## Quick start (JARs only)
 
