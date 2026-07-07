@@ -1,6 +1,6 @@
 # Romlet Client (public release)
 
-Pre-built **Romlet Client** injector for **Minecraft 1.21.8 NeoForge (NetEase PC)**.  
+Pre-built **Romlet Client** injector for **Minecraft 1.21.8 NeoForge** (official Mojang launcher or NetEase PC).  
 This repo contains **binaries only** — no source code.
 
 ## Download
@@ -23,8 +23,9 @@ The injector validates agent + payload jars before attach. Do not delete or rena
 
 1. Download `RomletClient.zip` from Releases and extract the whole folder.
 2. Install **JDK 21+** if you do not already have it.
-3. **Double-click `kazhi-injector-*.jar` in `app/`** (opens the launcher GUI), or run **`RomletClient.bat`** / **`RomletClient.sh`**.
-4. Unlock with your passkey, start Minecraft (NetEase), and click **INJECT**.
+3. Install **NeoForge 1.21.8** for the official launcher if needed.
+4. **Double-click `kazhi-injector-*.jar` in `app/`** (opens the launcher GUI), or run **`RomletClient.bat`** / **`RomletClient.sh`**.
+5. Unlock with your passkey, start Minecraft, and click **INJECT**.
 
 Keep all jars in `app/` together. The injector JAR is the main launcher — no `.exe` required.
 
@@ -48,6 +49,6 @@ Unlock with your passkey in the launcher before injecting.
 
 See `~/.kazhi/kazhi-debug.log` (or `%USERPROFILE%\.kazhi\kazhi-debug.log` on Windows), or use **Open log** in the launcher.
 
-## Unsupported versions
+## Requirements
 
-If your NetEase launcher ships an MC patch other than **1.21.8**, injection is blocked with a clear message.
+**Minecraft 1.21.8 + NeoForge** only. Fabric, vanilla, and other MC versions are not supported.
